@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Tabs">
+      <UniqueIdentifier>{8fb45505-98d1-4557-aa26-7430d2c50204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hooks">
+      <UniqueIdentifier>{2beaceb3-ef3c-498c-bf5c-d92cbf620ca8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{6a62ba3e-aea6-48ed-8157-0e265beea9aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tools">
+      <UniqueIdentifier>{d6413cd4-0a18-4cea-bcdf-78d041f3e5e0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xex.xml" />
+    <None Include="..\time.inl">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Media.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleHooks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyVault.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Network.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="System.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Detour.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INIReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IntegrityManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="XUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings_Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KVGuard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dashboard_Defs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dashboard_UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="extras.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormatUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD_UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="INIPhaser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleINI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="games.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tab_stealth.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xzp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bypasses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Encrypt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Network.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tab_Bypasses.cpp">
+      <Filter>Source Files\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="Tab_Changes.cpp">
+      <Filter>Source Files\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="Tab_Cheats.cpp">
+      <Filter>Source Files\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="Tab_UI.cpp">
+      <Filter>Source Files\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="Tab_Stealth.cpp">
+      <Filter>Source Files\Tabs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dashboard_Defs.cpp">
+      <Filter>Source Files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Dashboard_UI.cpp">
+      <Filter>Source Files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD_UI.cpp">
+      <Filter>Source Files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings_Scene.cpp">
+      <Filter>Source Files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleHooks.cpp">
+      <Filter>Source Files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="XUI.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="xzp.cpp">
+      <Filter>Source Files\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="detour.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="FormatUtils.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Globals.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="INIPhaser.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegrityManager.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="KVGuard.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilites.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="System.cpp">
+      <Filter>Source Files\hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="Encrypt.cpp">
+      <Filter>Source Files\Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release Retail|Xbox 360">
+      <Configuration>Release Retail</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C492A6D4-66A1-49D5-88F0-8A87AF0BB89C}</ProjectGuid>
+    <Keyword>Xbox360Proj</Keyword>
+    <ProjectName>XBL Umbrella</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>2010-01</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
+    <IncludePath>..\xkelib;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <RemoteRoot>HDD:\</RemoteRoot>
+    <ImageXexOutput>$(OutDir)$(ProjectName).xex</ImageXexOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\xkelib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
+    <ClCompile>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>NDEBUG;_XBOX;LTCG</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\User\Desktop\ResilienceLive Source\Client\Client\stdafx.h;..\xkelib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>xapilib.lib;d3d9ltcg.lib;d3dx9.lib;xgraphics.lib;xboxkrnl.lib;xnet.lib;xaudio2.lib;xact3ltcg.lib;x3daudioltcg.lib;xmcoreltcg.lib;vcomp.lib;xbdm.lib</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <SetChecksum>true</SetChecksum>
+      <AdditionalOptions>/ignore:4089 /dll /ALIGN:128,4096 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>"$(ProjectDir)xextool.exe" -m r -r a "$(ImageXexOutput)"</Command>
+    </PostBuildEvent>
+    <ImageXex>
+      <ConfigurationFile>xex.xml</ConfigurationFile>
+    </ImageXex>
+    <Deploy>
+      <DeploymentType>EmulateDvd</DeploymentType>
+      <Progress>true</Progress>
+      <ForceCopy>true</ForceCopy>
+      <ExcludedFromBuild>false</ExcludedFromBuild>
+    </Deploy>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\time.inl" />
+    <None Include="xex.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bypasses.h" />
+    <ClInclude Include="Dashboard_Defs.h" />
+    <ClInclude Include="Dashboard_UI.h" />
+    <ClInclude Include="Detour.h" />
+    <ClInclude Include="Encrypt.h" />
+    <ClInclude Include="extras.h" />
+    <ClInclude Include="FormatUtils.h" />
+    <ClInclude Include="games.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="HUD_UI.h" />
+    <ClInclude Include="images.h" />
+    <ClInclude Include="INIPhaser.h" />
+    <ClInclude Include="INIReader.h" />
+    <ClInclude Include="IntegrityManager.h" />
+    <ClInclude Include="KeyVault.h" />
+    <ClInclude Include="KVGuard.h" />
+    <ClInclude Include="Media.h" />
+    <ClInclude Include="Network.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Settings_Scene.h" />
+    <ClInclude Include="SimpleINI.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="Tab_stealth.h" />
+    <ClInclude Include="TitleHooks.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="XUI.h" />
+    <ClInclude Include="xzp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dashboard_Defs.cpp" />
+    <ClCompile Include="Dashboard_UI.cpp" />
+    <ClCompile Include="detour.cpp" />
+    <ClCompile Include="Encrypt.cpp" />
+    <ClCompile Include="FormatUtils.cpp" />
+    <ClCompile Include="Globals.cpp" />
+    <ClCompile Include="HUD_UI.cpp" />
+    <ClCompile Include="INIPhaser.cpp" />
+    <ClCompile Include="IntegrityManager.cpp" />
+    <ClCompile Include="KVGuard.cpp" />
+    <ClCompile Include="Network.cpp" />
+    <ClCompile Include="Settings_Scene.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release Retail|Xbox 360'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="Tab_Bypasses.cpp" />
+    <ClCompile Include="Tab_Changes.cpp" />
+    <ClCompile Include="Tab_Cheats.cpp" />
+    <ClCompile Include="Tab_Stealth.cpp" />
+    <ClCompile Include="Tab_UI.cpp" />
+    <ClCompile Include="TitleHooks.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="Utilites.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="XUI.cpp" />
+    <ClCompile Include="xzp.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

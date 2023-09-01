@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{C492A6D4-66A1-49D5-88F0-8A87AF0BB89C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release Retail|Xbox 360 = Release Retail|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C492A6D4-66A1-49D5-88F0-8A87AF0BB89C}.Release Retail|Xbox 360.ActiveCfg = Release Retail|Xbox 360
+		{C492A6D4-66A1-49D5-88F0-8A87AF0BB89C}.Release Retail|Xbox 360.Build.0 = Release Retail|Xbox 360
+		{C492A6D4-66A1-49D5-88F0-8A87AF0BB89C}.Release Retail|Xbox 360.Deploy.0 = Release Retail|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB8978D8-8D81-4AA6-9B8B-12287B508D79}
+	EndGlobalSection
+EndGlobal
