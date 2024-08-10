@@ -16,19 +16,20 @@ PWCHAR toWCHAR(PCHAR Text, ...) {
 namespace XUI {
 	HRESULT ScnGuideInfo::OnRender(XUIMessageRender *pRenderData, BOOL& bHandled) {
 		InitializeChildren();
-		wchar_t Text[64];
-		wchar_t Unbanned[64];
-		if (Globals::Status >= 0x7A000000) {
-			txt_Time.SetText(Utilities::PCHARtoWCHAR("Free Mode"));
-		}
-		else if (Globals::Days >= 500) { txt_Time.SetText(Utilities::PCHARtoWCHAR("LifeTime")); }
+		if (Globals::Status >= 0x7A000000) { txt_Time.SetText(L"Free Mode"); }
+		else if (Globals::Days >= 500) { txt_Time.SetText(L"LifeTime"); }
 		else if (Globals::ReserveDays >= 0 && Globals::Hours >= 0 && Globals::Minutes >= 0){
-			txt_Time.SetText(Utilities::PCHARtoWCHAR("%iD %iH %iM", Globals::ReserveDays, Globals::Hours, Globals::Minutes));
-		
+			wchar_t RemainingTimeText[64];
+			swprintf(RemainingTimeText, L"%iD %iH %iM", Globals::Days, Globals::Hours, Globals::Minutes);
+
+			txt_Time.SetText(RemainingTimeText);
 		}
 		
-		txt_KVDays.SetText(Utilities::PCHARtoWCHAR("%iD %iH %iM", Globals::DaysUnbanned, Globals::HoursUnbanned, Globals::MinutesUnbanned));
-		Sleep(1000);
+		wchar_t KVTimeText[64];
+		swprintf(KVTimeText, L"%iD %iH %iM", Globals::DaysUnbanned, Globals::HoursUnbanned, Globals::MinutesUnbanned);
+		txt_KVDays.SetText(KVTimeText);
+		
+		Sleep(1000); // Who thought this was a good idea?
 
 		//HUDHooks::RefreshUIText_Hook();
 		return ERROR_SUCCESS;
