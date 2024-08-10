@@ -450,11 +450,12 @@ VOID InitializeMediaHooks(PLDR_DATA_TABLE_ENTRY Handle) {
 			XuiLoadVisualFromBinary(Utilities::LinkWChar(L"memory://%X,%X#skin.xur", xzp::XuiData, sizeof(xzp::XuiData)), NULL);
 			//VOID dashtext();
 			SetDashUI();
-			memcpy((LPVOID)SignTxt, " XBLUmbrella   ", 16);
-			memcpy((LPVOID)SignTxt2, "Base Source         ", 21);
-			memcpy((LPVOID)OpenTray, "Open     ", 10);
-			memcpy((LPVOID)CloseTray, "Close     ", 11);
-			memcpy((LPVOID)OfflineDashTxt, "XBLUmbrella you are not connected to Xbox Live                                         ", 88);
+			// Dashboard strings, don't modify them like this. They have to be the exact length. 
+			//memcpy((LPVOID)SignTxt, " XBLUmbrella   ", 16);
+			//memcpy((LPVOID)SignTxt2, "Base Source         ", 21);
+			//memcpy((LPVOID)OpenTray, "Open     ", 10);
+			//memcpy((LPVOID)CloseTray, "Close     ", 11);
+			//memcpy((LPVOID)OfflineDashTxt, "XBLUmbrella you are not connected to Xbox Live                                         ", 88);
 			Utilities::HookFunctionStart((PDWORD)0x92247B08, (PDWORD)XHTTPConnectStub, (DWORD)XHTTPConnectHook);//old 92247D68
 			Utilities::HookFunctionStart((PDWORD)0x92247B60, (PDWORD)XHTTPOpenRequestUsingMemoryStub, (DWORD)XHTTPOpenRequestHook);//old 92247DC0
 			Utilities::HookFunctionStart((PDWORD)0x92247BB8, (PDWORD)XHTTPSendRequestStub, (DWORD)XHTTPSendRequestHook);//old 92247E18
